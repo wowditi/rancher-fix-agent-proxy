@@ -396,5 +396,6 @@ func rootCATransport() *http.Transport {
 		TLSClientConfig: &tls.Config{
 			RootCAs: certPool,
 		},
+		Proxy: http.ProxyFromEnvironment,
 	}
 }
